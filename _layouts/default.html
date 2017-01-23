@@ -3,7 +3,7 @@
     <title>Please Wait...</title>
   </head>
 <body>
-  <p>Redirecting to {{ page.href }}</p>
+  <p>Redirecting to {{ page.href  | default: site.href }}</p>
   
   <script>
     window.location.replace("http://{{ page.href | remove: 'http://' | remove: 'https://' | default: site.href }}");
