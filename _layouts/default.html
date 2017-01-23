@@ -6,7 +6,8 @@
   <p>Redirecting to {{ page.href }}</p>
   
   <script>
-    window.location.replace("http://{{ page.href | remove: 'http://'  remove: 'https://'  default: site.href }}");
+    window.location.replace("http://{{ page.href | remove: 'http://' | remove: 'https://' | default: site.href }}");
+    //page.href | remove: 'http://' | remove: 'https://' | default: site.href 
   </script>
 </body>
 </html>
