@@ -1,8 +1,12 @@
 <html>
+  <head>
+    <title>Please Wait...</title>
+  </head>
 <body>
-<p>Redirecting to {{ page.href }}</p>
-<script>
-window.location.replace("http://{{ page.href | remove: 'http://' | remove: 'https://' | url_encode }}");
-</script>
+  <p>Redirecting to {{ page.href }}</p>
+  
+  <script>
+    window.location.replace("http://{{ page.href | remove: 'http://' remove: 'https://' }}");
+  </script>
 </body>
 </html>
