@@ -1,5 +1,6 @@
 ---
-layout: null
+layout: default
+title: list
 ---
 <style>
 table, th, td {
@@ -13,7 +14,6 @@ th {
     text-align: left;
 }
 </style>
-<body>
 <table style="width:100%">
   <tr>
     <th>Page Url</th>
@@ -56,4 +56,3 @@ th {
 {% endif %}
 {% endfor %}
 </table>
-</body>
