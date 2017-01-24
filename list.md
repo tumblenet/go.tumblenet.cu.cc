@@ -17,20 +17,41 @@ th {
 <table style="width:100%">
   <tr>
     <th>Page Url</th>
-    <th>Redirect</th> 
+    <th>Redirect</th>
+    
   </tr>
 
 {% if site.href %}
 <tr>
-    <th><a href="{{ site.url }}">Default</a></th>
-    <th>{{ site.href }}</th>
+    <th>
+        {% unless site.href == site.comingSoon %}<a href="{{ site.url }}">{% endunless %}
+            Default
+        {% unless site.href == site.comingSoon %}</a>{% endif %}
+    </th>
+    <th>
+    {% if site.href == site.comingSoon %}
+    Coming Soon
+    {% else %}
+        {{ site.href }}
+    {% endif %}
+    </th>
   </tr>
 {% endif %}
 {% for item in site.pages %}
 {% if item.href %}
 <tr>
-    <th><a href="{{ site.url }}{{ item.url }}">{{ site.url }}{{ item.url }}</a></th>
-    <th>{{ item.href }}</th>
+    <th>
+        {% unless item.href == site.comingSoon %}<a href="{{ site.url }}{{ item.url }}">{% endunless %}
+            {{ site.url }}{{ item.url }}
+        {% unless item.href == site.comingSoon %}</a>{% endif %}
+    </th>
+    <th>
+    {% if item.href == site.comingSoon %}
+    Coming Soon
+    {% else %}
+        {{ item.href }}
+    {% endif %}
+    </th>
   </tr>
 {% endif %}
 {% endfor %}
