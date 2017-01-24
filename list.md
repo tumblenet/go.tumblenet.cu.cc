@@ -15,14 +15,17 @@ th {
 }
 </style>
 <table style="width:100%">
+
+<thead>
   <tr>
     <th>Page Url</th>
     <th>Redirect</th>
     
   </tr>
-
+  
+  </thead>
+<tbody>
 {% if site.href %}
-<thead>
 <tr>
     <th>
         {% unless site.href == site.comingSoon %}<a href="{{ site.url }}">{% endunless %}
@@ -37,9 +40,7 @@ th {
     {% endif %}
     </th>
   </tr>
-  </thead>
 {% endif %}
-<thbody>
 {% for item in site.pages %}
 {% if item.href %}
 
