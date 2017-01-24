@@ -16,7 +16,6 @@ layout: null
 {% endif %}
 {% for page in site.pages %}
 {% if page.href %}
-<p><a href="{{ page.url }}">{{ site.url }}{{ page.url }}</a> ==> {{ page.href }}</p>
 <tr>
     <th><a href="{{ page.url }}">{{ site.url }}{{ page.url }}</a></th>
     <th>{{ page.href }}</th>
