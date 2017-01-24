@@ -1,5 +1,5 @@
 ---
 layout: default
-href: #
+href: '#'
 ---
 Coming soon.
