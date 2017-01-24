@@ -14,7 +14,7 @@ th {
     text-align: left;
 }
 </style>
-<table style="width:100%">
+<table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
 
 <thead>
   <tr>
@@ -27,18 +27,18 @@ th {
 <tbody>
 {% if site.href %}
 <tr>
-    <th>
+    <td>
         {% unless site.href == site.comingSoon %}<a href="{{ site.url }}">{% endunless %}
             Default
         {% unless site.href == site.comingSoon %}</a>{% endunless %}
-    </th>
-    <th>
+    </td>
+    <td>
     {% if site.href == site.comingSoon %}
     Coming Soon
     {% else %}
         {{ site.href }}
     {% endif %}
-    </th>
+    </td>
   </tr>
 {% endif %}
 {% for item in site.pages %}
