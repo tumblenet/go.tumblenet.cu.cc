@@ -3,7 +3,13 @@
     <title>Please Wait...</title>
   </head>
 <body>
-  <p>Redirecting to {{ page.href  | default: site.href }}</p>
+  <p>
+    {% if page.href == '#' %}
+    Coming soon.
+    {% else %}
+    Redirecting to <a href="http://{{ page.href | remove: 'http://' | remove: 'https://' | default: site.href }}">{{ page.href  | default: site.href }}</a>
+    {% endif %}
+  </p>
   
   <script>
     window.location.replace("http://{{ page.href | remove: 'http://' | remove: 'https://' | default: site.href }}");
