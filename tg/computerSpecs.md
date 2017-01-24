@@ -1,5 +1,5 @@
 ---
-layout: null
-href: 
+layout: default
+href: #
 ---
-Comming soon.
+Coming soon.
