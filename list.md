@@ -29,7 +29,7 @@ th {
 {% for page in site.pages %}
 {% if page.href %}
 <tr>
-    <th><a href="{{ site.url }}{{ page.url }}">{{ site.url }}{{ page.url }}</a></th>
+    <th>[{{ site.url }}{{ page.url }}]({{ site.url }}{{ page.url }})/th>
     <th>{{ page.href }}</th>
   </tr>
 {% endif %}
