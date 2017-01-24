@@ -22,6 +22,7 @@ th {
   </tr>
 
 {% if site.href %}
+<thead>
 <tr>
     <th>
         {% unless site.href == site.comingSoon %}<a href="{{ site.url }}">{% endunless %}
@@ -36,23 +37,27 @@ th {
     {% endif %}
     </th>
   </tr>
+  </thead>
 {% endif %}
+<thbody>
 {% for item in site.pages %}
 {% if item.href %}
+
 <tr>
-    <th>
+    <td>
         {% unless item.href == site.comingSoon %}<a href="{{ site.url }}{{ item.url }}">{% endunless %}
             {{ site.url }}{{ item.url }}
         {% unless item.href == site.comingSoon %}</a>{% endunless %}
-    </th>
-    <th>
+    </td>
+    <td>
     {% if item.href == site.comingSoon %}
     Coming Soon
     {% else %}
         {{ item.href }}
     {% endif %}
-    </th>
+    </td>
   </tr>
 {% endif %}
 {% endfor %}
+</tbody>
 </table>
