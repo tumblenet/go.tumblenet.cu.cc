@@ -2,13 +2,12 @@
 layout: default
 title: list
 ---
-<table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
+<table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
 
 <thead>
   <tr>
     <th>Page Url</th>
     <th>Redirect</th>
-    
   </tr>
   
   </thead>
