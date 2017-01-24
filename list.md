@@ -1,6 +1,6 @@
 ---
 layout: default
-title: list
+title: List
 ---
 <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
 
