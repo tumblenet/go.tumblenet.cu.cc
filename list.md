@@ -22,15 +22,15 @@ th {
 
 {% if site.href %}
 <tr>
-    <th><a href="{{ site.url }}{{ page.url }}">Default</a></th>
+    <th><a href="{{ site.url }}">Default</a></th>
     <th>{{ site.href }}</th>
   </tr>
 {% endif %}
-{% for page in site.pages %}
-{% if page.href %}
+{% for item in site.pages %}
+{% if item.href %}
 <tr>
-    <th><a href="{{ site.url }}{{ page.url }}">{{ site.url }}{{ page.url }}</a></th>
-    <th>{{ page.href }}</th>
+    <th><a href="{{ site.url }}{{ item.url }}">{{ site.url }}{{ item.url }}</a></th>
+    <th>{{ item.href }}</th>
   </tr>
 {% endif %}
 {% endfor %}
