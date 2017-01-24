@@ -26,7 +26,7 @@ th {
     <th>
         {% unless site.href == site.comingSoon %}<a href="{{ site.url }}">{% endunless %}
             Default
-        {% unless site.href == site.comingSoon %}</a>{% endif %}
+        {% unless site.href == site.comingSoon %}</a>{% endunless %}
     </th>
     <th>
     {% if site.href == site.comingSoon %}
@@ -43,7 +43,7 @@ th {
     <th>
         {% unless item.href == site.comingSoon %}<a href="{{ site.url }}{{ item.url }}">{% endunless %}
             {{ site.url }}{{ item.url }}
-        {% unless item.href == site.comingSoon %}</a>{% endif %}
+        {% unless item.href == site.comingSoon %}</a>{% endunless %}
     </th>
     <th>
     {% if item.href == site.comingSoon %}
