@@ -11,9 +11,11 @@
     {% endif %}
   </p>
   
+  {% unless page.href == '#' %}
   <script>
     window.location.replace("http://{{ page.href | remove: 'http://' | remove: 'https://' | default: site.href }}");
     //page.href | remove: 'http://' | remove: 'https://' | default: site.href 
   </script>
+  {% endunless %}
 </body>
 </html>
