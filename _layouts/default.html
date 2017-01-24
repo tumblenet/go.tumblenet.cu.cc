@@ -1,7 +1,8 @@
+{% assign href = page.href | default: site.href %}
 <html>
   <head>
     <title>
-      {% if page.href == site.comingSoon %}
+      {% if href == site.comingSoon %}
       Coming Soon
       {% else %}
       Please Wait..
@@ -10,17 +11,17 @@
   </head>
 <body>
   <p>
-    {% if page.href == site.comingSoon %}
+    {% if href == site.comingSoon %}
     Coming soon.
     {% else %}
-    Redirecting to <a href="http://{{ page.href | remove: 'http://' | remove: 'https://' | default: site.href }}">{{ page.href  | default: site.href }}</a>
+    Redirecting to <a href="http://{{ href | remove: 'http://' | remove: 'https://' }}">{{ href }}</a>
     {% endif %}
   </p>
   
-  {% unless page.href == site.comingSoon %}
+  {% unless href == site.comingSoon %}
   <script>
-    window.location.replace("http://{{ page.href | remove: 'http://' | remove: 'https://' | default: site.href }}");
-    //page.href | remove: 'http://' | remove: 'https://' | default: site.href 
+    window.location.replace("http://{{ href | remove: 'http://' | remove: 'https://' }}");
+    //href | remove: 'http://' | remove: 'https://' | default: site.href 
   </script>
   {% endunless %}
 </body>
