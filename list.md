@@ -3,11 +3,11 @@ layout: null
 ---
 <body>
 {% if site.href %}
-<p>Default ==> {{ site.href }}</p>
+<p><a href="{{ site.href }}">Default ==> {{ site.href }}</a></p>
 {% endif %}
 {% for page in site.pages %}
 {% if page.href %}
-<p>{{ site.url }}{{ page.url }} ==> {{ page.href }}</p>
+<p><a href="{{ page.url }}">{{ site.url }}{{ page.url }} ==> {{ page.href }}</a></p>
 {% endif %}
 {% endfor %}
 </body>
