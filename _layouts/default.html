@@ -10,13 +10,13 @@
     </title>
   </head>
 <body>
-  <p>
+  <h1>
     {% if href == site.comingSoon %}
     Coming soon.
     {% else %}
     Redirecting to <a href="http://{{ href | remove: 'http://' | remove: 'https://' }}">{{ href }}</a>
     {% endif %}
-  </p>
+  </h1>
   
   {% unless href == site.comingSoon %}
   <script>
