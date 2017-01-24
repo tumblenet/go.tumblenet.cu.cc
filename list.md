@@ -2,18 +2,6 @@
 layout: default
 title: list
 ---
-<style>
-table, th, td {
-    border: 1px solid black;
-    border-collapse: collapse;
-}
-th, td {
-    padding: 5px;
-}
-th {
-    text-align: left;
-}
-</style>
 <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
 
 <thead>
