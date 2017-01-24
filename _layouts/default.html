@@ -1,6 +1,12 @@
 <html>
   <head>
-    <title>Please Wait...</title>
+    <title>
+      {% if page.href == '#' %}
+      Coming Soon
+      {% else %}
+      Please Wait..
+      {% endif %}
+    </title>
   </head>
 <body>
   <p>
