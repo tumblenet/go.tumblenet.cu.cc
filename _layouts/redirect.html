@@ -59,7 +59,7 @@
     {% else %}
     Redirecting to <a href="http://{{ href | remove: 'http://' | remove: 'https://' }}">{{ href }}</a>
     {% endif %}
-</p>
+</p>tht
           </div>
         </div>
         <footer class="demo-footer mdl-mini-footer">
@@ -69,8 +69,8 @@
 	  {% if href == site.href %}
 	  <script>
 		  var onSubdomain = getQueryVariable("subdomain");
-		  alert(onSubdomain);		
-			  if(onSubdomain == "true") {
+		  		
+			  if(onSubdomain == "true/") {
 			  var path = window.location.pathname;
 			  window.location.replace("http://{{ href | remove: 'http://' | remove: 'https://' }}" + "/" + path);
 		  } else {
