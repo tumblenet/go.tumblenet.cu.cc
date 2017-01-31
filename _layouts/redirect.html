@@ -69,7 +69,8 @@
 	  {% if href == site.href %}
 	  <script>
 		  var onSubdomain = getQueryVariable("subdomain");
-		  if(onSubdomain == "true") {
+		  alert(onSubdomain);		
+			  if(onSubdomain == "true") {
 			  var path = window.location.pathname;
 			  window.location.replace("http://{{ href | remove: 'http://' | remove: 'https://' }}" + "/" + path);
 		  } else {
