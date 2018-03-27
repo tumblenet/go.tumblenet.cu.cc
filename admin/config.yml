@@ -1,5 +1,5 @@
 backend:
-  name: git-gateway
+  name: github
   repo: tumblenet/go.tumblenet.cu.cc
 
 #publish_mode: editorial_workflow
