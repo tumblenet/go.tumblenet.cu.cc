@@ -1,5 +1,5 @@
+<!DOCTYPE html>
 {% assign href = page.href | default: site.href %}
-<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -14,7 +14,7 @@
     </title>
 
 
-  
+
     <link rel="stylesheet" href="{{ site.url }}/css/material.min.css">
 	  <link rel="stylesheet" href="{{ site.url }}/css/style.css">
 
@@ -34,6 +34,7 @@
     </style>
   </head>
   <body>
+    {% if href == site.comingSoom %}
     <div class="demo-layout mdl-layout mdl-layout--fixed-header mdl-js-layout mdl-color--grey-100">
       <header class="demo-header mdl-layout__header mdl-layout__header--scroll mdl-color--grey-100 mdl-color-text--grey-800">
         <div class="mdl-layout__header-row">
@@ -66,19 +67,20 @@
         </footer>
       </main>
     </div>
+      {% endif %}
 	  {% if href == site.href %}
 	  <script>
 		  var onSubdomain = getQueryVariable("subdomain");
-		  		
+
 			  if(onSubdomain == "true/") {
 			  var path = window.location.pathname;
 			  window.location.replace("http://{{ href | remove: 'http://' | remove: 'https://' }}" + path);
 		  } else {
 			window.location.replace("http://{{ href | remove: 'http://' | remove: 'https://' }}");
 		  }
-		  
-		  
-		  
+
+
+
 		  function getQueryVariable(variable) {
 		     var query = window.location.search.substring(1);
 		     var vars = query.split('&');
@@ -96,9 +98,9 @@
 	 {% unless href == site.comingSoon %}
 	  <script>
 	    window.location.replace("http://{{ href | remove: 'http://' | remove: 'https://' }}");
-	    //href | remove: 'http://' | remove: 'https://' | default: site.href 
+	    //href | remove: 'http://' | remove: 'https://' | default: site.href
 	  </script>
 	  {% endunless %}
-	  {% endif %} 
+	  {% endif %}
   </body>
 </html>

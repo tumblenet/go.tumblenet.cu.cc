@@ -9,7 +9,7 @@ title: List
     <th>Page Url</th>
     <th>Redirect</th>
   </tr>
-  
+
   </thead>
 <tbody>
 {% if site.href %}
@@ -28,7 +28,7 @@ title: List
     </td>
   </tr>
 {% endif %}
-{% for item in site.pages %}
+{% for item in site.idlink %}
 {% if item.href %}
 
 <tr>

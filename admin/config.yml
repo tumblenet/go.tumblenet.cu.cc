@@ -1,0 +1,18 @@
+backend:
+  name: github
+  repo: tumblenet/go.tumblenet.cu.cc
+
+publish_mode: editorial_workflow
+media_folder: "uploads" # Media files will be stored in the repo under images/uploads
+
+collections:
+  - name: "idlink"
+    label: "Redirect"
+    folder: "/_idlink/"
+    create: true
+    slug: "{{slug}}"
+    pattern: ['//http:\/\/\w+', "Must have at least 12 characters"]
+    fields: # The fields for each document, usually in front matter
+      - {label: "Layout", name: "layout", widget: "hidden", default: "redirect"}
+      - {label: "URL", name: "href", widget: "string", required="true"}
+      - {label: "permalink", name: "permalink", widget: "string"}
