@@ -28,7 +28,7 @@ title: List
     </td>
   </tr>
 {% endif %}
-{% for item in site.idlink %}
+{% for item in site.documents %}
 {% if item.href %}
 
 <tr>
