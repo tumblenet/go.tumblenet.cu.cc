@@ -14,6 +14,8 @@ collections:
   idlink:
     output: true
     permalink: /idlink/:year:month:day
+  link:
+    output:true
 
 
 permalink: pretty
