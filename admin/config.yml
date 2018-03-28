@@ -11,7 +11,7 @@ collections:
     label: "Redirect"
     folder: "_idlink/"
     create: true
-    slug: "{{url}}"
+    slug: "{{year}}{{month}}{{day}}{{hour}}{{minute}}{{second}}"
     pattern: ['//http:\/\/\w+', "Must have at least 12 characters"]
     fields: # The fields for each document, usually in front matter
       - {label: "Layout", name: "layout", widget: "hidden", default: "redirect"}

@@ -13,7 +13,7 @@ comingSoon: .
 collections:
   idlink:
     output: true
-    permalink: /idlink/:year:month:day
+    permalink: /idlink/:year:month:day:hour:minuite:second
   link:
     output: true
 
