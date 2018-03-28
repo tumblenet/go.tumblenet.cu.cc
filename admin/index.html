@@ -17,7 +17,7 @@ var RedirectPreview = createClass({
   render: function() {
     var entry = this.props.entry;
     var qurl = entry.getIn(['data', 'href']);
-    return h('iframe', {"className":"preview-redirect", src: qurl, seamless: true, width:"100%", height:"100%", },
+    return h('iframe', {"className":"preview-redirect", src: qurl, seamless: true, width:"100%", height:"100%", sandbox: "true"},
 
     );
   }
