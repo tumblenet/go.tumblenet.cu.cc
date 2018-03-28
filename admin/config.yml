@@ -1,7 +1,7 @@
 backend:
   name: github
   repo: tumblenet/go.tumblenet.cu.cc
-  base_url: https://tumblenet-api.herokuapp.com/netlify
+  base_url: https://tumblenet-api.herokuapp.com/
 
 #publish_mode: editorial_workflow
 media_folder: "uploads" # Media files will be stored in the repo under images/uploads
