@@ -12,28 +12,29 @@ collections:
     folder: "_idlink/"
     create: true
     delete: true
-    slug: "{{year}}{{month}}{{day}}{{hour}}{{minute}}{{second}}"
+    slug: "{{year}}{{month}}{{day}}"
     fields: # The fields for each document, usually in front matter
       - {label: "Layout", name: "layout", widget: "hidden", default: "redirect"}
-      #- {label: "Title", name: "title", widget: "string", required="true"}
+    #  - {label: "Title", name: "title", widget: "string", required="true"}
       - {label: "URL", name: "href", widget: "string", required="true"}
       - {label: "date", name: "date", widget: "datetime", required="true"}
   - name: "mult-idlink"
     label: "Multiple Redirect"
-    folder: "_idlink/mult/"
+    folder: "_link/mult/"
     create: true
     delete: true
-    slug: "{{slug}}{{year}}{{month}}{{day}}"
+    slug: "{{slug}}"
     fields: # The fields for each document, usually in front matter
       - {label: "Layout", name: "layout", widget: "hidden", default: "multredirect"}
-      #- {label: "Title", name: "title", widget: "string"}
+      - {label: "Title", name: "title", widget: "string", required="true"}
       - label: "URLs"
         label_singular: "URL"
         name: "hrefList"
         widget: "list"
+        required: "true"
         fields:
-          - {label: "URL", name: "href", widget: "string"}
-      - {label: "date", name: "date", widget: "datetime", required="true"}
+          - {label: "URL", name: "href", widget: "string",required="true"v}
+      #- {label: "date", name: "date", widget: "datetime", required="true"}
   - name: "link"
     label: "Named Redirect"
     folder: "/_link"
@@ -43,5 +44,5 @@ collections:
     pattern: ['//http:\/\/\w+', "Must have at least 12 characters"]
     fields: # The fields for each document, usually in front matter
       - {label: "Layout", name: "layout", widget: "hidden", default: "redirect"}
-      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Title", name: "title", widget: "string", required="true"}
       - {label: "URL", name: "href", widget: "string", required="true"}
