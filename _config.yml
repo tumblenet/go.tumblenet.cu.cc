@@ -25,7 +25,7 @@ production: true
 plugins:
  - jekyll-feed
  - jekyll-redirect-from
- - jekyll-seo-tag
+# - jekyll-seo-tag
  - jekyll-sitemap
  - jekyll-avatar
  - jemoji
