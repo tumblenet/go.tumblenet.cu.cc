@@ -45,6 +45,17 @@ title: List
     {% endif %}
     </td>
   </tr>
+  {% elsif item.hrefList %}
+  <tr>
+      <td>
+          {% unless item.href == site.comingSoon %}<a href="{{ site.url }}{{ item.url }}">{% endunless %}
+              {{ site.url }}{{ item.url }}
+          {% unless item.href == site.comingSoon %}</a>{% endunless %}
+      </td>
+      <td>
+      Multiple URLs
+      </td>
+    </tr>
 {% endif %}
 {% endfor %}
 </tbody>
