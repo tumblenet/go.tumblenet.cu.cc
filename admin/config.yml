@@ -18,14 +18,14 @@ collections:
     #  - {label: "Title", name: "title", widget: "string", required="true"}
       - {label: "URL", name: "href", widget: "string", required="true", default: "http://"}
       - {label: "date", name: "date", widget: "datetime", required="true"}
-  - name: "mult-idlink"
+  - name: "mult-link"
     label: "Multiple Redirect"
     folder: "_link/mult/"
     create: true
     delete: true
     slug: "{{slug}}"
     fields: # The fields for each document, usually in front matter
-      - {label: "Layout", name: "layout", widget: "hidden", default: "multredirect"}
+      - {label: "Layout", name: "layout", widget: "hidden", default: "multiredirect"}
       - {label: "Title", name: "title", widget: "string", required="true"}
       - label: "URLs"
         label_singular: "URL"
