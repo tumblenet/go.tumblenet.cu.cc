@@ -16,7 +16,7 @@ collections:
     permalink: /idlink/:year:y_day:hour:minute:second/
   link:
     output: true
-    permalink: /idlink/:title/
+    permalink: /link/:title/
 
 
 permalink: pretty
