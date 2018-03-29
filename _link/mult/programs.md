@@ -1,5 +1,5 @@
 ---
-layout: multredirect
+layout: multiredirect
 title: programs
 hrefList:
   - href: 'https://central.github.com/deployments/desktop/desktop/latest/win32'
